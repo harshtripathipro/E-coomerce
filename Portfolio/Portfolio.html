@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:100,200,300,400,500,600,700,900" rel="stylesheet"> -->
+    <link href="//db.onlinewebfonts.com/c/3b4479adb6380191cab6291b9d0215d3?family=Terminator+Real+NFI" rel="stylesheet"
+        type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet'>
+    <link href="//db.onlinewebfonts.com/c/2303f3594424ab346f843c144d3c6434?family=Toxigenesis+Lt" rel="stylesheet"
+        type="text/css" />
+    <link href="//db.onlinewebfonts.com/c/ef99d8fb3a8f5c0c22eebca9182bae69?family=Planet+Kosmos" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/bradley/Blotter/master/build/blotter.min.js"></script>
+    <script src="https://rawgit.com/bradley/Blotter/master/build/materials/liquidDistortMaterial.js"></script>
+    <script src="portfolio.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-text">
+            <div class="text-swap-title">
+                <span>I'm</span>
+            </div>
+            <div class="box">
+                <span>waking up...</span>
+                <span>having breakfast...</span>
+                <span>scrolling facebook...</span>
+                <span> watching anime...</span>
+                <span>dressing...</span>
+                <span>on my way...</span>
+                <span> here!</span>
+            </div>
+        </div>
+        <div class="preloader-count">0</div>
+    </div>
+    <div class="home">
+        <div class="title">Harsh <div>Tripathi</div>
+        </div>
+        <div class="main1">
+            <div id="main">creative</div>
+            <div id="main2">developer</div>
+        </div>
+        <nav>
+            <ul>
+                <a href="#"><span class="click">oo</span>About</a>
+                <a href="#"><span class="click">oo</span>Code</a>
+                <a href="#"><span class="click">oo</span>Project</a>
+                <a href="#"><span class="click">oo</span>Contact</a>
+            </ul>
+        </nav>
+        <div class="abc">
+            <span></span>
+        </div>
+        <div class="contact">
+            <a href="#" class="facebook">facebook</a>
+            <a href="#" class="instagram"> instagram</a>
+            <a href="#" class="telegram">telegram</a>
+        </div>
+        <div class="legacy">
+            <div class="resume">
+                <a href="">Resume.</a>
+            </div>
+        </div>
+    </div>
+    <div class="blankpage">
+        <div class="about">
+            <div>I am a B.tech student</div>
+            <div>at <span data-text="IIIT Surat">IIIT Surat</span>.I'm a full</div>
+            <div>stack <span data-text="Web developer">Web developer</span> </div>
+            <div>I have serious passion</div>
+            <div>for <span data-text="UI">UI</span> effects, </div>
+            <div><span data-text="animations">animations</span> and dynamic user expreiences. Let's create something
+            </div>
+            <div><span data-text="special.">special.</span> I am also into </div>
+            <div><span data-text="competitive coding.">competitive coding.</span></div>
+            <div>Common Lets check my <span data-text="ratings.">ratings.</span></div>
+        </div>
+    </div>
+    <div class="code">
+        <div class="card">
+            <div class="heading">
+                <span data-text="hackerearth">hackerearth</span>
+            </div>
+            <div class="imgbox" id="h">
+            </div>
+            <div class="details">
+                <div class="hackerearth">
+                <div id="hackerearthdescription">
+
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="heading">
+                <span data-text="Codechef">Codechef</span>
+            </div>
+            <div class="imgbox" id="c">
+            </div>
+            <div class="details">
+                <div class="codechef" id="codechef">
+                    <div id="codechefdescription">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="heading">
+                <span data-text="Codeforces">Codeforces</span>
+            </div>
+            <div class="imgbox" id="co">
+            </div>
+            <div class="details">
+                <div class="codeforces">
+                    <div id="codeforcesdescription"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="project">
+        <div class="project1">Under Construction</div>
+        <div class="project2">Under Construction</div>
+        <div class="project3">Under Construction</div>
+        <div class="project4">Under Construction</div>
+        <div class="project5">Under Construction</div>
+        <div class="project6">Under Construction</div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            var a = document.querySelectorAll(".box span");
+            var i = 1;
+            $(a[0]).hide(2000, function () {
+                i++;
+                if (i < 7) {
+                    $(this).next().hide(1000, arguments.callee);
+                }
+            });
+        });
+        function preloadercount() {
+            var counter = setInterval(function () {
+                var c = parseInt($(".preloader-count").text());
+                c += 1;
+                $(".preloader-count").text((c).toString());
+                if (c == 100) {
+                    clearInterval(counter);
+                    $(".preloader-count").addClass("hidea");
+                    $(".preloader-count").addClass("hide");
+                    $(".preloader").addClass("active");
+                }
+            }, 65);
+        }
+        preloadercount();
+        async function fetchCF() {
+            res = await fetch('https://rating-wiz.herokuapp.com/codeforces/koderharsh');
+            u = await res.text();
+            u = JSON.parse(u);
+            console.log(u);
+            console.log(u.name + '  ' + u.rating);
+            document.getElementById("codeforcesdescription").innerHTML = "Username<br>" + u.name + "<br><br>Ratings<br>" + u.rating;
+        }
+        fetchCF();
+        async function fetchCC() {
+            res = await fetch('http://rating-wiz.herokuapp.com/codechef/harshtripath1');
+            u = await res.text();
+            u = JSON.parse(u);
+            console.log(u);
+            console.log(u.username + '  ' + u.rating);
+            document.getElementById("codechefdescription").innerHTML = "Username<br>" + "harshtripath1"+ "<br><br>Ratings<br>" + u.rating;
+        }
+        fetchCC();             
+        async function fetchHE() {
+            res = await fetch('http://rating-wiz.herokuapp.com/hackerearth/tripathiharsh1991');
+            u = await res.text();
+            u = JSON.parse(u);
+            console.log(u);
+            console.log(u.name + '  ' + u.rating);
+            document.getElementById("hackerearthdescription").innerHTML = "Username<br>" + "tripathiharsh<br>1991" + "<br><br>Ratings<br>" + u.rating;
+        }
+        fetchHE();             
+    </script>
+</body>
+
+</html>

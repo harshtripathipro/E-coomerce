@@ -1,0 +1,519 @@
+@import url(//db.onlinewebfonts.com/c/ef99d8fb3a8f5c0c22eebca9182bae69?family=Planet+Kosmos);
+@import url(//db.onlinewebfonts.com/c/3b4479adb6380191cab6291b9d0215d3?family=Terminator+Real+NFI);
+@import url(//db.onlinewebfonts.com/c/2303f3594424ab346f843c144d3c6434?family=Toxigenesis+Lt);
+*{
+    box-sizing: border-box;   
+    margin: 0;
+    padding: 0;
+}
+*::-webkit-scrollbar{
+    display:none;
+}
+body{   
+    font-family: 'Assistant', sans-serif;
+    font-family: 'Planet Kosmos';
+    font-style: normal;
+    font-size: 32px;    
+    color: #fff;     
+    letter-spacing: 5px;    
+    font-weight: 400;      
+    cursor:url('click.png'),pointer;  
+    scroll-behavior: smooth;    
+    width: 100vw;
+    overflow-x: hidden;
+
+}
+.preloader{
+    height: 100vh;
+    background-color: #0d0d0d;
+    position: fixed;
+    top: 0;
+    width: 100vw;      
+    z-index: 10000;
+    pointer-events: none;
+}
+.preloader-text{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 23px 0 0 30px;      
+    height: 320px;   
+}
+.preloader-text span{
+    display: block;  
+    margin-bottom: 15px;       
+}
+.box{
+    background-color:#0d0d0d;
+    height:55px ;
+    overflow: hidden;  
+    margin-top:3px;
+}
+.preloader-count{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 180px;  
+    color: #0d0d0d; 
+    -webkit-text-stroke: 3px white;
+}
+.preloader-count:after{
+    content: '%';
+    font-size: 180px;    
+}
+ .hidea{    
+    transition-duration: 0.5s;    
+    -webkit-text-fill-color: #fff;
+ }
+ .hide{    
+    transition-delay: 0.5s;
+    transition-duration: 0.8s;
+    bottom: -150vh;
+}
+ .active{
+    transform: translateY(-100vh);
+    transition-duration:  0.5s;
+    transition-delay: 1.3s;    
+}
+.preloader::before{
+    content: 'LOADING';
+    color: rgba(255, 255, 255,0.02);
+    font-size: 8em;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-49.5%,-55%);
+}
+
+.home{       
+    background-image: url('photo.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;    
+    height: 100vh;   
+    width: 100vw;
+    display: grid; 
+    grid-template-columns:20% 20% 20% 20% 20%;
+    grid-template-rows:20% 20% 20% 20% 20%;  
+    z-index: 2;
+    font-size:22px;   
+    position:relative;  
+    font-family:'Terminator Real NFI' ;
+    line-height: 1.5;
+    
+}
+.title{
+    
+    grid-area:1/1/5/2;
+    top: 4%;
+    left: 2%;
+    letter-spacing: 10px;
+    font-family: 'Planet Kosmos';
+    color: rgb(191, 211, 214);
+    background-color: red;    
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);  
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    position: fixed;    
+    font-size: 32px;
+}
+.title div{
+    display: block;
+}
+.main1{
+    grid-area:1/2/6/5;
+    position: relative;
+    font-size: 150px;
+    font-weight: 100;
+    font-family: 'Planet Kosmos';
+}
+#main{
+    
+    position: absolute;
+    top: 42%;
+    left: 5%;
+    width: 100%;
+    text-align: center;
+    padding: 30px 50px 30px 30px;  
+    
+}
+#main2{
+    position: absolute;
+    top: 60%;
+    left: 3.5%;
+    width: 100%;
+    text-align: center;
+    padding: 30px 50px 30px 30px;  
+    
+}
+
+nav{
+    grid-area:1/5/3/6;
+    top: 4%;
+    right: 2%;   
+    position: fixed;  
+    font-size: 32px;  
+    font-family: 'Toxigenesis Lt'; 
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+nav a{
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    line-height: 1.5;    
+    float: right;
+    padding-left: 100%;    
+}
+.contact{
+    grid-area:5/1/6/2;
+    left: 2%;
+    bottom: 3%;    
+    letter-spacing: 10px;
+    position: fixed;    
+    font-family: 'Toxigenesis Lt'; 
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+.contact a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+}
+
+.click{
+    visibility: hidden;
+}
+ .contact .instagram:hover{
+    letter-spacing: 1.2px;
+    transition:all 0.5s ease-in-out;   
+    cursor: pointer; 
+    cursor:url('click.png'),pointer;  
+    background-image: linear-gradient(45deg,#af4261 40%, #f3ec78 60% , #d66384 40%);  
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+ .contact .facebook:hover{
+    letter-spacing: 1.2px;
+    transition:all 0.5s ease-in-out;   
+    cursor: pointer; 
+    cursor:url('click.png'),pointer;  
+    background-image: linear-gradient(45deg,#3b5998 40%, white 60% , #3b5998 40%);  
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+ .contact .telegram:hover{
+    letter-spacing: 1.2px;
+    transition:all 0.5s ease-in-out;   
+    cursor: pointer; 
+    cursor:url('click.png'),pointer;  
+    background-image: linear-gradient(45deg,#0088cc 40%, white 60% , #0088cc 40%);  
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+ nav a:hover{
+    letter-spacing: 1.2px;
+    transition:all 0.5s ease-in-out;   
+    cursor: pointer; 
+    cursor:url('click.png'),pointer;  
+ }
+ a{
+    letter-spacing: 6px;
+    transition:all 0.5s ease-in-out;   
+
+}
+.abc{    
+    grid-area: 4/5/6/6;
+    position: absolute;
+}
+.legacy{
+    grid-area: 3/5/6/6;
+    position: relative;    
+}
+.resume{
+    position: fixed;
+    font-family: 'Assistant', sans-serif; 
+    top: 50%;
+    right: -2.5%;
+    height: 5%;
+    width: 8%;
+    background-color: black;
+    text-decoration: none;   
+    transform: rotate(-90deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: red;    
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);  
+    background-size: 100%;
+    background-repeat: repeat;    
+}
+.resume a{
+    font-size: 24px;    
+    font-weight:300;
+    color:rgb(44, 36, 36);
+    text-decoration: none;
+    position: absolute;
+    letter-spacing: 0.8;
+
+}
+/* @media  (max-width:450px)
+{
+    body{
+        font-size: 24px;        
+    }
+    .box{
+        height: 28px;
+    }
+    .preloader-count{
+        font-size: 85px;
+        bottom: 50px;
+    }
+    .preloader::before{
+        font-size: 3em;
+        transform: translate(-49.5%,-65%);
+    }
+    .preloader-count:after{
+        font-size: 85px;
+    }
+    .title{
+        grid-area: 1/1/5/4;
+        padding-top: 5%;
+        padding-left: 2%;
+    }
+    .contact{
+        font-size: 24px;
+        padding-top: 20%;
+        padding-bottom: 4%;
+    }
+    .main{
+        font-size: 5px;
+        font-weight: 50;
+    }
+    .resume{
+        font-size: 1px;
+        font-weight: 10;
+    }
+    nav{
+        visibility: hidden;
+    }
+} */
+.blankpage{
+    height:400vh;
+    width: 100vw;    
+    position:relative ;    
+    background: linear-gradient(to bottom,#444040 0%,rgba(0,0,0,1) 30%);
+    scroll-behavior: smooth;
+}
+.about{
+    position: absolute;
+    top: 30%;        
+    width: 100vw;  
+    font-size: 170px;  
+    font-family: 'Toxigenesis Lt'; 
+    font-weight: bolder;
+    letter-spacing: 0.5;
+    line-height: 1.2;    
+    scroll-behavior: smooth;
+    transform: translateZ(0);
+    transform-style: preserve-3d;
+}
+.about div{
+    animation: rotate 2s linear infinite ;
+    animation-direction: alternate;
+}
+.about span{    
+    color: rgba(0,0,0,1);
+    text-shadow: #fff 0 0 1px, #fff 0 0 1px, #fff 0 0 1px, #fff 0 0 1px, #fff 0 0 1px, #fff 0 0 1px;
+    position: relative;    
+}
+.about span::before{
+    position: absolute;
+    content: attr(data-text);
+    top: 8.75%;
+    left: 0%;
+    width: 0%;
+    overflow: hidden;
+    transition: 1s;
+    color: #fff;    
+    text-shadow: none;
+    white-space: nowrap;
+}
+.about span:hover::before{
+    width: 100%;
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0.5deg);
+    }
+    to{
+        transform: rotate(-0.5deg);
+    }
+}
+.code{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,1);        
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    position: relative;
+    margin: 20px 0;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    height: 400px;
+    width: 400px;
+    transition: 1s;
+    
+}
+.card:hover{
+    transform: perspective(2000px) rotate(-10deg);
+}
+.imgbox{
+    margin-top: 20px;
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+    position: absolute ;   
+    top: 15%;
+    left: 0%;
+
+}
+#h{
+    height: 400px;
+    width: 350px;
+    background-image: url('hackerearth.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow:  10px 10px  rgb(248, 245, 245);
+}
+#c{
+    height: 400px;
+    width: 350px;
+    background: url('codechef.png');
+    background-size: 350px 400px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow:  10px 10px  rgb(248, 245, 245);
+}
+#co{
+    height: 400px;
+    width: 350px;
+    background: url('codeforces.png');
+    background-size: 350px 400px;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow:  10px 10px  rgb(248, 245, 245);
+}
+.card:hover .imgbox{
+transform: rotateY(-135deg);
+}
+.heading{
+    font-family: 'Toxigenesis Lt'; 
+    font-size: 50px;
+    font-weight: 600;
+    color: rgba(0,0,0,1);
+    text-shadow: #fff 0 0 1px, #fff 0 0 1px, #fff 0 0 1px, #fff 0 0 1px, #fff 0 0 1px, #fff 0 0 1px;
+}
+.heading span::before{
+    position: absolute;
+    content: attr(data-text);
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.8s;
+    color: #fff;    
+    text-shadow: none;
+    white-space: nowrap;
+}
+.card:hover span::before{
+    width: 100%;
+}
+
+.details{
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    font-family: 'Toxigenesis Lt'; 
+    text-shadow: 2px 2px 1px 1px rgb(191, 211, 214);
+    font-size: 40px;    
+}
+.details .hackerearth
+{ 
+    height: 400px;
+    width: 350px;    
+    border-radius: 10px;
+    background: linear-gradient(to right bottom,white 0%, rgb(81, 81, 155) 30%,  #2c3351 50%);
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+
+}
+.details .codechef
+{ 
+    height: 400px;
+    width: 350px;    
+    border-radius: 10px;
+    background: linear-gradient(to right bottom,white 0%,  #713916 30%);
+    color:white;
+    font-size: 36px;
+    font-weight: 700;
+}
+.details .codeforces
+{ 
+    height: 400px;
+    width: 350px;    
+    border-radius: 10px;
+    background: linear-gradient(to right bottom,white 0%, #f7ca31 60%,#1082c9 80%,#bb1a1d 100%);
+    color:white;
+    font-size: 36px;
+    font-weight: 700;
+}
+#codeforcesdescription{
+    padding: 10px 20px 0px 20px;
+    background-image: linear-gradient(to right ,#1d1d1c 40%,#1f1f1e 100%);  
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+}
+#codechefdescription{
+    padding: 10px 20px 0px 20px;
+    background-image: linear-gradient(to right,#1d1d1c 20%,#1f1f1e 100%);  
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+}
+#hackerearthdescription{
+    padding: 10px 20px 0px 20px;
+    color: white;    
+}
+.project{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,1);
+    border: 2px solid red;
+    font-family: 'Toxigenesis Lt';
+}
+
+
